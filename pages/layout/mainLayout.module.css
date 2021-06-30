@@ -1,0 +1,16 @@
+.header {
+	display: flex;
+	justify-content: space-around;
+	color: black;
+	margin-bottom: 30px;
+}
+.header a {
+	text-decoration: none;
+	color: black;
+	border-radius: 15px;
+	padding: 5px;
+	background-color: rgb(208, 194, 243);
+}
+.header a:hover {
+	background-color: rgb(142, 103, 241);
+}

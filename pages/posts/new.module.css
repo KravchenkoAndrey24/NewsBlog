@@ -1,0 +1,17 @@
+.mainBlock {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+	background-color: rgb(208, 194, 243);
+	border-radius: 15px;
+	padding: 5px;
+}
+.link:hover {
+	background-color: rgb(142, 103, 241);
+}

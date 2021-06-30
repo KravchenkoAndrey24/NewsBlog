@@ -1,0 +1,24 @@
+.postFlex {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px;
+}
+
+.postFlex a {
+	display: block;
+	margin: 5px;
+	padding: 5px;
+	text-decoration: none;
+	color: black;
+	font-size: 24px;
+}
+.postFlex a:hover {
+	background-color: rgb(142, 103, 241);
+	border-radius: 15px;
+}
+.postFlex span {
+	color: red;
+}
+.postItem {
+	width: 40%;
+}
