@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NextThunkDispatch, wrapper } from "../../store";
 import { createCommentTC, getOnePostTC, InitialStatePostType } from "../../store/reducers/onePostReducer";
 import { RootState } from "../../store/reducers/rootReducer";
-import { MainLayout } from "../layout/mainLayout";
+import MainLayout from "../layout/mainLayout";
 import style from './postId.module.css'
 
 

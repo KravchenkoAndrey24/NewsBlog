@@ -4,7 +4,7 @@ import { NextThunkDispatch, wrapper } from '../store';
 import { deletePostTC, InitialStatePostsType, postsTC } from '../store/reducers/postsReducer'
 import { RootState } from '../store/reducers/rootReducer';
 import Link from 'next/link';
-import { MainLayout } from './layout/mainLayout';
+import MainLayout from './layout/mainLayout';
 import style from './index.module.css';
 
 

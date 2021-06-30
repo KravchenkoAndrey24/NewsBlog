@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { createPostTC } from "../../store/reducers/postsReducer";
 import Link from 'next/link'
-import { MainLayout } from '../layout/mainLayout'
+import MainLayout from '../layout/mainLayout'
 import style from './new.module.css'
 
 export default function NewPost() {

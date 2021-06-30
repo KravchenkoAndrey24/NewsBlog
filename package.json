@@ -1,17 +1,21 @@
 {
-  "name": "ulbitv",
+  "name": "newsblog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://KravchenkoAndrey24.github.io/NewsBlog",
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@types/react-redux": "^7.1.16",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
+    "gh-pages": "^3.2.3",
     "next": "10.0.6",
     "next-redux-wrapper": "^6.0.2",
     "react": "17.0.1",

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import style from './mainLayout.module.css'
 
 
-export const MainLayout = ({ children, title }) => {
+const MainLayout = ({ children, title }) => {
 	return (
 		<>
 			<Head>
@@ -26,3 +26,4 @@ export const MainLayout = ({ children, title }) => {
 	);
 };
 
+export default MainLayout;
