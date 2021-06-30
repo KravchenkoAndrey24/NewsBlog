@@ -1,4 +1,3 @@
-
 import { Context, createWrapper } from "next-redux-wrapper";
 import { AnyAction, applyMiddleware, createStore, Store } from "redux";
 import thunk, { ThunkDispatch } from "redux-thunk";

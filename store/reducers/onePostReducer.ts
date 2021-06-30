@@ -1,4 +1,4 @@
-import { commentAPI, CreateCommentTCType, postsAPI } from "../api/blogApi";
+import { commentAPI, CreateCommentTCType, InitialStatePostType, postsAPI } from "../api/blogApi";
 import { isInitialized } from "./appReducer";
 import { AppThunk } from "./rootReducer";
 
@@ -22,13 +22,13 @@ export const initialState = {
 export type OnePostReducerActionType =
 	ReturnType<typeof setPostAC>
 
-export type InitialStatePostType = typeof initialState;
-
 export const onePostReducer = (state: InitialStatePostType = initialState, action: OnePostReducerActionType): InitialStatePostType => {
 	switch (action.type) {
 		case ACTION_TYPE.SET_POST:
-			return { ...action.postInfo, comments: action.postInfo.comments.map(item => item) }
-
+			return {
+				...action.postInfo,
+				comments: action.postInfo.comments.map(item => item)
+			}
 		default:
 			return state
 	}
@@ -48,8 +48,6 @@ export const getOnePostTC = (postId: string): AppThunk => async dispatch => {
 	} finally {
 		dispatch(isInitialized(true))
 	}
-
-
 }
 
 

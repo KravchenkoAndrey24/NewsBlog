@@ -1,8 +1,8 @@
-
 import { ChangeEvent, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NextThunkDispatch, wrapper } from "../../store";
-import { createCommentTC, getOnePostTC, InitialStatePostType } from "../../store/reducers/onePostReducer";
+import { InitialStatePostType } from "../../store/api/blogApi";
+import { createCommentTC, getOnePostTC } from "../../store/reducers/onePostReducer";
 import { RootState } from "../../store/reducers/rootReducer";
 import MainLayout from "../layout/mainLayout";
 import style from './postId.module.css'
@@ -47,7 +47,11 @@ export default function Post() {
 				<p>{post.body}</p>
 				{comments}
 				<div>
-					<input placeholder='Enter your comment' value={commentBody} onChange={onHandlerCommentText} />
+					<input
+						placeholder='Enter your comment'
+						value={commentBody}
+						onChange={onHandlerCommentText}
+					/>
 					<button onClick={createComment}>Create a comment on this post</button>
 				</div>
 			</div>

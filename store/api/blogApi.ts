@@ -8,28 +8,52 @@ const instance = axios.create({
 
 export const postsAPI = {
 	getPosts() {
-		const promise = instance.get('posts');
-		return promise
+		return instance.get<InitialStatePostsType>('posts');
 	},
 	createPost(data: DataCreatePost) {
-		const promise = instance.post('posts', data);
-		return promise
+		return instance.post<CreatePostDataAC>('posts', data);
+
 	},
 	deletePost(postId: number) {
-		const promise = instance.delete(`posts/${postId}`);
-		return promise
+		return instance.delete(`posts/${postId}`);
 	},
 	getOnePost(postId: string) {
-		const promise = instance.get(`posts/${postId}?_embed=comments`);
-		return promise
+		return instance.get<InitialStatePostType>(`posts/${postId}?_embed=comments`);
 	}
 }
 
 export const commentAPI = {
 	createComment(data: CreateCommentTCType) {
-		const promise = instance.post(`comments`, data);
-		return promise
+		return instance.post<CreateCommetType>(`comments`, data);
 	}
+}
+
+export type InitialStatePostsType = {
+	id: number;
+	title: string;
+	body: string;
+}[]
+
+export type CreatePostDataAC = {
+	id: number
+	title: string
+	body: string
+}
+
+export type InitialStatePostType = {
+	id: number;
+	title: string;
+	body: string;
+	comments: {
+		id: number;
+		postId: number;
+		body: string;
+	}[];
+}
+export type CreateCommetType = {
+	id: number
+	postId: string
+	body: string
 }
 
 export type DataCreatePost = {

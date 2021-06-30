@@ -17,7 +17,6 @@ const MainLayout = ({ children, title }) => {
 				<Link href='/'>
 					<a>Главная страница</a>
 				</Link>
-
 			</div>
 			<div>
 				{children}
