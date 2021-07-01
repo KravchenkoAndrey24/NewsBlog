@@ -4,9 +4,9 @@ import { NextThunkDispatch, wrapper } from '../store';
 import { deletePostTC, postsTC } from '../store/reducers/postsReducer'
 import { RootState } from '../store/reducers/rootReducer';
 import Link from 'next/link';
-import MainLayout from './layout/mainLayout';
 import style from './index.module.css';
 import { InitialStatePostsType } from '../store/api/blogApi';
+import MainLayout from '../layout/mainLayout';
 
 
 

@@ -1,10 +1,10 @@
-import { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import MainLayout from "../../layout/mainLayout";
 import { NextThunkDispatch, wrapper } from "../../store";
 import { InitialStatePostType } from "../../store/api/blogApi";
 import { createCommentTC, getOnePostTC } from "../../store/reducers/onePostReducer";
 import { RootState } from "../../store/reducers/rootReducer";
-import MainLayout from "../layout/mainLayout";
 import style from './postId.module.css'
 
 
